@@ -1,7 +1,7 @@
 # OPSD Germany Load Forecast – Dockerized ML API
 
 ## Overview
-This project is a **Dockerized machine learning service** that forecasts **Germany’s hourly electricity load** using real historical data from **Open Power System Data (OPSD)**.
+This project is a **Dockerized machine learning service** that forecasts **Germany's hourly electricity load** using real historical data from **Open Power System Data (OPSD)**.
 
 The system demonstrates how **energy engineering domain knowledge** can be combined with **data-driven modeling** and **modern MLOps practices** to build production-ready energy analytics services.
 
@@ -9,7 +9,6 @@ The system demonstrates how **energy engineering domain knowledge** can be combi
 
 ## Project Motivation
 Energy systems generate large amounts of time-series data. Even **simple, well-designed machine learning models** can provide valuable insights for:
-
 - Load forecasting  
 - Operational planning  
 - System monitoring  
@@ -43,17 +42,18 @@ DOI: https://doi.org/10.25832/time_series/2020-10-06
 ---
 
 ## System Architecture
-
+```
 Real OPSD Data
-↓
+       ↓
 Feature Engineering
 (time lags, rolling stats)
-↓
+       ↓
 ML Model (Ridge Regression)
-↓
-FastAPI Service
-↓
-Docker Container
+       ↓
+   FastAPI Service
+       ↓
+  Docker Container
+```
 
 ---
 
@@ -75,15 +75,22 @@ The focus is on **robust baselines**, **interpretability**, and **operational su
 ## API Endpoints
 
 ### Health Check
-
+```http
 GET /health
+```
+
 Response:
 ```json
 { "status": "ok" }
+```
 
-Load Forecast
+### Load Forecast
+```http
 GET /forecast?horizon_hours=24
+```
+
 Response:
+```json
 {
   "country": "DE",
   "horizon_hours": 24,
@@ -94,27 +101,37 @@ Response:
     }
   ]
 }
-API Documentation
+```
+
+### API Documentation
+```http
 GET /docs
-
+```
 Swagger UI with full OpenAPI schema.
-____________________________________________________________________________________________________
-Running the Project
-1️⃣ Build Docker Image
+
+---
+
+## Running the Project
+
+### 1️⃣ Build Docker Image
+```bash
 docker build -t opsd-load-forecast .
+```
 
-2️⃣ Run Container
+### 2️⃣ Run Container
+```bash
 docker run -p 8000:8000 opsd-load-forecast
+```
 
-3️⃣ Open in Browser
+### 3️⃣ Open in Browser
+- http://127.0.0.1:8000/health
+- http://127.0.0.1:8000/forecast?horizon_hours=24
+- http://127.0.0.1:8000/docs
 
-http://127.0.0.1:8000/health
+---
 
-http://127.0.0.1:8000/forecast?horizon_hours=24
-
-http://127.0.0.1:8000/docs
-
-Project Structure
+## Project Structure
+```
 opsd-de-load-forecast/
 ├─ api/
 │  ├─ main.py
@@ -129,31 +146,31 @@ opsd-de-load-forecast/
 ├─ Dockerfile
 ├─ requirements.txt
 └─ README.md
+```
 
-Why This Project Matters
+---
 
-Uses real German energy data
+## Why This Project Matters
+- Uses real German energy data
+- Applies engineering-aware feature design
+- Follows production-ready patterns
+- Demonstrates end-to-end ML lifecycle
+- Directly relevant to energy digitalization, climate-tech, and Industry 4.0
 
-Applies engineering-aware feature design
+---
 
-Follows production-ready patterns
+## Author
+**Lamis Ahmad**
 
-Demonstrates end-to-end ML lifecycle
+Background in Electrical & Mechatronics Engineering with a Master's focus in Artificial Intelligence.
 
-Directly relevant to energy digitalization, climate-tech, and Industry 4.0
-
-Author
-
-Lamis Ahmad
-Background in Electrical & Mechatronics Engineering with a Master’s focus in Artificial Intelligence.
 Interested in energy systems, data-driven modeling, and industrial AI applications.
 
 Open to junior full-time roles or Praktikum opportunities in Germany.
 
-License
-
-This project is for educational and demonstration purposes.
-Data usage follows the OPSD license and attribution requirements.
-
-
 ---
+
+## License
+This project is for educational and demonstration purposes.
+
+Data usage follows the OPSD license and attribution requirements.
