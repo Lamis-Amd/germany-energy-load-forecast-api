@@ -157,16 +157,13 @@ opsd-de-load-forecast/
 - Demonstrates end-to-end ML lifecycle
 - Directly relevant to energy digitalization, climate-tech, and Industry 4.0
 
----
+Author
 
-## Author
-**Lamis Ahmad**
-
-Background in Electrical & Mechatronics Engineering with a Master's in Artificial Intelligence.
-
+Lamis Ahmad
+Background in Electrical & Mechatronics Engineering with a Master’s focus in Artificial Intelligence.
 Interested in energy systems, data-driven modeling, and industrial AI applications.
 
-
+Open to junior full-time roles or Praktikum opportunities in Germany.
 
 ---
 
@@ -174,3 +171,6 @@ Interested in energy systems, data-driven modeling, and industrial AI applicatio
 This project is for educational and demonstration purposes.
 
 Data usage follows the OPSD license and attribution requirements.
+
+
+---
