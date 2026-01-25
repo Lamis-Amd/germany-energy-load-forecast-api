@@ -162,11 +162,10 @@ opsd-de-load-forecast/
 ## Author
 **Lamis Ahmad**
 
-Background in Electrical & Mechatronics Engineering with a Master's focus in Artificial Intelligence.
+Background in Electrical & Mechatronics Engineering with a Master's degree in Artificial Intelligence.
 
 Interested in energy systems, data-driven modeling, and industrial AI applications.
 
-Open to junior full-time roles or Praktikum opportunities in Germany.
 
 ---
 
