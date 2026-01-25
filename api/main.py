@@ -1,6 +1,10 @@
 # api/main.py
 from __future__ import annotations
 
+from fastapi.responses import Response
+from src.plotting import plot_last_30_days, plot_avg_by_hour
+
+
 import joblib
 import pandas as pd
 from fastapi import FastAPI, HTTPException
@@ -53,3 +57,15 @@ def forecast(horizon_hours: int = 24):
         current_ts.loc[next_time] = y_pred
 
     return ForecastResponse(horizon_hours=horizon_hours, forecast=forecast_points)
+@app.get("/plots/last30days")
+def plots_last_30_days():
+    df = load_opsd_de_load()
+    png_bytes = plot_last_30_days(df)
+    return Response(content=png_bytes, media_type="image/png")
+
+
+@app.get("/plots/avg-by-hour")
+def plots_avg_by_hour():
+    df = load_opsd_de_load()
+    png_bytes = plot_avg_by_hour(df)
+    return Response(content=png_bytes, media_type="image/png")

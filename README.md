@@ -129,21 +129,42 @@ docker run -p 8000:8000 opsd-load-forecast
 - http://127.0.0.1:8000/docs
 
 ---
+### Plot Visualizations (PNG)
+
+- **GET** `/plots/last30days`  
+Returns a PNG chart of Germany’s load for the last 30 days.
+
+- **GET** `/plots/avg-by-hour`  
+Returns a PNG chart of average load by hour of day.
+
+---
 
 ## Project Structure
 ```
 opsd-de-load-forecast/
 ├─ api/
+│  ├─ __init__.py
 │  ├─ main.py
 │  └─ schemas.py
 ├─ src/
+│  ├─ __init__.py
 │  ├─ data.py
 │  ├─ features.py
 │  ├─ train.py
-│  └─ anomaly.py
+│  ├─ anomaly.py
+│  ├─ plotting.py
+│  └─ visualize_data.py
 ├─ models/
 │  └─ model.joblib
+├─ figures/
+│  ├─ elec_load_last30days.png
+│  ├─ avg_load_per_hour.png
+│  ├─ Figure_1.png
+│  ├─ Figure_2.png
+│  └─ Figure_3.png
+├─ .gitignore
 ├─ Dockerfile
+├─ dockerignore
 ├─ requirements.txt
 └─ README.md
 ```
@@ -157,13 +178,11 @@ opsd-de-load-forecast/
 - Demonstrates end-to-end ML lifecycle
 - Directly relevant to energy digitalization, climate-tech, and Industry 4.0
 
-Author
+## Author
 
-Lamis Ahmad
-Background in Electrical & Mechatronics Engineering with a Master’s focus in Artificial Intelligence.
-Interested in energy systems, data-driven modeling, and industrial AI applications.
-
-Open to junior full-time roles or Praktikum opportunities in Germany.
+**Lamis Ahmad**
+Background in Electrical & Mechatronics Engineering with a Master’s degree in Artificial Intelligence.
+Interested industrial AI applications.
 
 ---
 
