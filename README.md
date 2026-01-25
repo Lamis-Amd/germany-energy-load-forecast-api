@@ -1,5 +1,11 @@
 # OPSD Germany Load Forecast – Dockerized ML API
-**Tech stack:** Python · FastAPI · Docker · Pandas · scikit-learn · Matplotlib
+
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.110-green)
+![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-orange)
+![Energy Data](https://img.shields.io/badge/Energy-OPSD-yellow)
+
 
 
 ## Overview
