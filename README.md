@@ -1,4 +1,6 @@
 # OPSD Germany Load Forecast – Dockerized ML API
+**Tech stack:** Python · FastAPI · Docker · Pandas · scikit-learn · Matplotlib
+
 
 ## Overview
 This project is a **Dockerized machine learning service** that forecasts **Germany's hourly electricity load** using real historical data from **Open Power System Data (OPSD)**.
