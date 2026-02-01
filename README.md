@@ -190,7 +190,7 @@ opsd-de-load-forecast/
 
 **Lamis Ahmad**
 Background in Electrical & Mechatronics Engineering with a Master’s degree in Artificial Intelligence.
-Interested industrial AI applications.
+Interested in industrial AI applications.
 
 ---
 
