@@ -144,7 +144,38 @@ Returns a PNG chart of Germany’s load for the last 30 days.
 
 - **GET** `/plots/avg-by-hour`  
 Returns a PNG chart of average load by hour of day.
+---
+## Dashboard – Data Exploration & Analysis
 
+In addition to the REST API, this project includes an **interactive dashboard** built with **Streamlit** to explore and analyze the electricity load data visually.
+
+The dashboard is designed to provide a clear, intuitive understanding of the dataset and its temporal patterns, without relying on terminal outputs.
+
+---
+
+### Dashboard Features
+
+- **Dataset Overview**
+  - Number of records
+  - Date range (start / end)
+  - Column and index information
+  - Preview of the first rows
+
+- **Interactive Visualizations**
+  - Electricity load over time (selectable last N days)
+  - Average load by hour of day (daily consumption pattern)
+  - Average load by day of week (weekday vs. weekend behavior)
+
+- **Data Export**
+  - Download filtered datasets as CSV for further analysis
+
+---
+
+### Running the Dashboard Locally
+
+```bash
+streamlit run dashboard/app.py
+```
 ---
 
 ## Project Structure
