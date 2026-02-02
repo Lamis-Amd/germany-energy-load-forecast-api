@@ -155,7 +155,7 @@ The dashboard provides:
 
 ## Dashboard Screenshot
 
-![Dashboard Preview]()
+![Dashboard Preview](Streamlit.png)
 
 *Interactive Streamlit dashboard showing real German electricity load data from OPSD.*
 
