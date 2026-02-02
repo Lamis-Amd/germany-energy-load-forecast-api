@@ -60,7 +60,7 @@ This makes the dataset well suited for time-series forecasting.
 ### 1️⃣ Electricity Load Over Time
 
 This plot shows the electricity demand over the last 30 days.
-![Load Last 30 Days](elec_load-last30days.png)
+![Load Last 30 Days](av_load_last30days.png)
 **Insight:**
 - Clear daily cycles
 - Repeating consumption patterns
@@ -69,7 +69,7 @@ This plot shows the electricity demand over the last 30 days.
 ### 2️⃣ Average Load by Hour of Day
 
 This visualization shows the average electricity demand for each hour of the day.
-![Average Load per Hour](av_load_per_hour.png)
+![Average Load per Hour](av_load_perHour.png)
 
 **Insight:**
 - Lowest demand during night hours
