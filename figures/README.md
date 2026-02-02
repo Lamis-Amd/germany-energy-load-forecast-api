@@ -110,6 +110,94 @@ The machine learning model learns these patterns directly from historical data.
 
 ---
 
+# 📊 Interactive Data Dashboard (Streamlit)
+
+To complement the FastAPI service and provide exploratory data analysis (EDA) in a more intuitive way, this project includes an interactive Streamlit dashboard.
+
+---
+
+## Why Streamlit?
+
+Streamlit is a Python framework designed to quickly turn data analysis scripts into interactive web applications. In this project, Streamlit is used to:
+
+- Explore the OPSD electricity load dataset visually
+- Inspect dataset structure without using the terminal
+- Present statistics and data previews in a professional UI
+- Bridge the gap between data engineering, analysis, and stakeholder-friendly visualization
+
+This approach is commonly used in:
+- Energy analytics teams
+- Data science prototyping
+- Internal dashboards for engineers and analysts
+
+---
+
+## Dashboard Features
+
+The dashboard provides:
+
+### Dataset Overview
+- Total number of rows and columns
+- Time range (start & end timestamps)
+
+### Interactive Data Preview
+- Adjustable number of rows (head of the dataset)
+
+### Dataset Metadata
+- Column names
+- Data types
+- Index type (DateTimeIndex)
+
+### Summary Statistics
+- Mean, standard deviation, min/max, percentiles
+
+---
+
+## Dashboard Screenshot
+
+![Dashboard Preview]()
+
+*Interactive Streamlit dashboard showing real German electricity load data from OPSD.*
+
+---
+
+## How It Fits Into the Project Architecture
+
+- **FastAPI** → production-ready API (forecasting, plots, health checks)
+- **Streamlit** → exploratory analysis & visualization layer
+- **Docker** → consistent runtime for both services
+
+This separation reflects real-world industry setups where:
+- APIs serve machines and systems
+- Dashboards serve humans
+
+---
+
+## Running the Dashboard
+```bash
+streamlit run dashboard/app.py
+```
+
+The dashboard runs independently from the FastAPI service and is intended for analysis, validation, and presentation, not production inference.
+
+---
+
+## Access the Dashboard
+
+Once running, open your browser at:
+```
+http://localhost:8501
+```
+
+---
+
+## Benefits of This Approach
+
+- **Separation of concerns:** API and dashboard serve different purposes
+- **Flexibility:** Dashboard can be updated without affecting API
+- **User-friendly:** Non-technical stakeholders can explore data
+- **Development speed:** Rapid prototyping and iteration
+
 ## Summary
 
 - Real national-level energy data
